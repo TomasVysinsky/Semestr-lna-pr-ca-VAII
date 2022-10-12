@@ -89,3 +89,15 @@
     margin-top: 5%;
     text-align: center;
 }
+
+@media (max-width: 850px){
+    .log-sup{
+        width: 50%;
+        top: 25%;
+        left: 30%;
+    }
+
+    .end-node{
+        height: 100px;
+    }
+}
