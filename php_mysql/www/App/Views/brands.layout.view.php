@@ -6,6 +6,7 @@
 <html lang="sk">
 <head>
     <title><?= \App\Config\Configuration::APP_NAME ?></title>
+    <meta charset="UTF-8" content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -17,10 +18,9 @@
     <link rel="stylesheet" href="public/css/Styles.css">
     <link rel="stylesheet" href="public/css/styl.css">
     <script src="public/js/script.js"></script>
-    <script src="public/js/cookie.js" type="application/javascript"></script>
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg bg-warning">
+<nav class="navbar  navbar-expand-lg bg-warning">
     <div class="container-fluid">
         <a class="branding" href="?c=home"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
+                    <a class="nav-link" href="?c=home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link" href="?c=brands">Brands</a>
+                    <a class="nav-link active" aria-current="page" href="?c=brands">Brands</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link" href="#">About Us</a>
@@ -44,27 +44,13 @@
         </div>
     </div>
 </nav>
-
-
-
-
 <div class="balance-background">
     <div class="web-content">
         <?= $contentHTML ?>
     </div>
-    <div class="menu-node end-node balance-background">
-        <p class="text-center text-wrap fs-6 ec">Site design by Tomáš Vyšinský <br/> 2022 <br/> Created as a school project</p>
-    </div>
 </div>
-
-<!--Cookies okienko-->
-<div class="cookie-disclaimer">
-    <div class="cookie-close accept-cookie"><i class="fa fa-times"></i></div>
-    <div class="container">
-        <p>JDM lovers uses cookies to increase the quality of the website. <a href="#">Read more about which cookies we use</a>.
-            <br>By continuing to use the website, you accept our use of cookies</p>
-        <button type="button" class="btn btn-success accept-cookie">I accept!</button>
-    </div>
+<div class="menu-node end-node static-end-node balance-background">
+    <p class="text-center text-wrap fs-6 ec">Site design by Tomáš Vyšinský <br/> 2022 <br/> Created as a school project</p>
 </div>
 </body>
 </html>
