@@ -1,0 +1,110 @@
+.menu-node {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-fixed{
+    position: fixed;
+    width: 100%;
+}
+
+.balance-background{
+/*    margin-top: 30px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.branding {
+    background-image: url("../images/JDM_webpage_logo.jpg");
+    background-size: 150px 150px;
+    /*size: 150px 150px;*/
+    background-position: center;
+    /*position: center;*/
+    width: 100px;
+    height: 50px;
+    border-radius: 0.95rem;
+}
+
+.link .main-node{
+    color: white!important;
+}
+
+.nh{
+    color: white;
+    font-family: inherit;
+}
+
+.ec{
+    color: black;
+}
+
+.main-node{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url("https://www.enjpg.com/img/2020/jdm-9.webp");
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+}
+
+.invite-node{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url("https://wallpapercave.com/wp/wp6793804.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+}
+
+.end-node{
+    background: orange;
+    height: 140px;
+    display: block;
+}
+
+.login-site{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.static-end-node{
+    bottom: 0;
+    position: fixed;
+}
+
+.log-sup{
+    width: 25%;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    margin: 0;
+    padding: 0;
+}
+
+.list-of-brands{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-title{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.col{
+    margin-top: 10px;
+}
+
+@media (max-width: 850px){
+    .log-sup{
+        width: 50%;
+        top: 25%;
+        left: 30%;
+    }
+
+    .end-node{
+        height: 100px;
+    }
+}

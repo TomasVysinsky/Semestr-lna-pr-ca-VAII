@@ -14,41 +14,43 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="public/css/Styles.css">
     <link rel="stylesheet" href="public/css/styl.css">
     <script src="public/js/script.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-light">
+<nav class="navbar fixed-top navbar-expand-lg bg-warning">
     <div class="container-fluid">
-        <a class="navbar-brand" href="?c=home">
-            <img src="public/images/vaiicko_logo.png" title="<?= \App\Config\Configuration::APP_NAME ?>"
-                 title="<?= \App\Config\Configuration::APP_NAME ?>">
-        </a>
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
-            </li>
-        </ul>
-        <?php if ($auth->isLogged()) { ?>
-            <span class="navbar-text">Prihlásený používateľ: <b><?= $auth->getLoggedUserName() ?></b></span>
-            <ul class="navbar-nav ms-auto">
+        <a class="branding" href="?c=home"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="?c=auth&a=logout">Odhlásenie</a>
+                    <a class="nav-link active" <!--aria-current="page"--> href="?c=home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link" href="./Brands.html">Brands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link" href="./Login.html">Login</a>
                 </li>
             </ul>
-        <?php } else { ?>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Prihlásenie</a>
-                </li>
-            </ul>
-        <?php } ?>
+        </div>
     </div>
 </nav>
-<div class="container-fluid mt-3">
+<div class="balance-background">
     <div class="web-content">
         <?= $contentHTML ?>
     </div>
+    <div class="menu-node end-node balance-background">
+        <p class="text-center text-wrap fs-6 ec">Site design by Tomáš Vyšinský <br/> 2022 <br/> Created as a school project</p>
+    </div>
 </div>
+
 </body>
 </html>
