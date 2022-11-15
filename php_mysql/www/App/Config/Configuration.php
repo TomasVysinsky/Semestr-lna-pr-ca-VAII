@@ -3,6 +3,7 @@
 namespace App\Config;
 
 use App\Auth\DummyAuthenticator;
+use App\Auth\LoginAuthenticator;
 
 /**
  * Class Configuration
@@ -15,7 +16,7 @@ class Configuration
     public const FW_VERSION = '2.0';
 
     public const DB_HOST = 'localhost';  // change to db, if docker you use docker
-    public const DB_NAME = 'vaiicko_db';
+    public const DB_NAME = 'ins';
     public const DB_USER = 'root'; // change to vaiicko_user, if docker you use docker
     public const DB_PASS = 'dtb456';
 
@@ -25,5 +26,5 @@ class Configuration
 
     public const DEBUG_QUERY = false;
 
-    public const AUTH_CLASS = DummyAuthenticator::class;
+    public const AUTH_CLASS = LoginAuthenticator::class;
 }
