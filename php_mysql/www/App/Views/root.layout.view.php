@@ -37,7 +37,7 @@
                     <a class="nav-link link" href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link" href="./Login.html">Login</a>
+                    <a class="nav-link link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Login</a>
                 </li>
             </ul>
         </div>

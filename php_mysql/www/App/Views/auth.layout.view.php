@@ -18,12 +18,40 @@
             integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/styl.css">
+    <link rel="stylesheet" href="public/css/Styles.css">
     <script src="public/js/script.js"></script>
 </head>
 <body>
-<div class="container-fluid mt-3">
+<nav class="navbar fixed-top navbar-expand-lg bg-warning">
+    <div class="container-fluid">
+        <a class="branding" href="?c=home"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" <!--aria-current="page"--> href="?c=home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link" href="./Brands.html">Brands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="balance-background h-100">
     <div class="web-content">
         <?= $contentHTML ?>
+    </div>
+    <div class="menu-node end-node static-end-node balance-background">
+        <p class="text-center text-wrap fs-6 ec">Site design by Tomáš Vyšinský <br/> 2022 <br/> Created as a school project</p>
     </div>
 </div>
 </body>
