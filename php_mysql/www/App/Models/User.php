@@ -6,11 +6,30 @@ use App\Core\Model;
 
 class User extends Model
 {
+    protected $id;
     protected $username;
     protected $password;
     protected $email;
     protected $name;
     protected $surename;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+
 
     /**
      * @return mixed
@@ -79,17 +98,17 @@ class User extends Model
     /**
      * @return mixed
      */
-    public function getSurname()
+    public function getSurename()
     {
-        return $this->surname;
+        return $this->surename;
     }
 
     /**
      * @param mixed $surname
      */
-    public function setSurname($surname): void
+    public function setSurename($surename): void
     {
-        $this->surname = $surname;
+        $this->surename = $surename;
     }
 
 

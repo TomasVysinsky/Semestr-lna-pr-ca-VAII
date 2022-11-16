@@ -48,7 +48,7 @@
                     <?php if ($auth->isLogged()) { ?>
                         <a class="nav-link link" href="#"><?php echo $auth->getLoggedUserName() ?></a>
                     <?php } else { ?>
-                        <a class="nav-link link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Register</a>
+                        <a class="nav-link link" href="?c=users&a=create">Register</a>
                     <?php } ?>
                 </li>
             </ul>
