@@ -80,12 +80,34 @@ class UsersController extends AControllerBase
     }
 
     public function store() {
-        $username = $this->request()->getValue('username');
-        $user = ($username ? User::getOne($username) : new User());
-        $user->setName($this->request()->getValue('name'));
-        $user->setSurname($this->request()->getValue('surename'));
-        $user->save();
-        return $this->redirect("?c=home");
+        $usersToCheck = User::getAll();
+        $current = null;
+        foreach ($usersToCheck as $user) {
+            /*$user = User::getOne($login);*/
+            if ($user->getUsername() == $_SESSION['user']) {
+                $current = $user;
+            }
+        }
+
+        $email = $this->request()->getValue('email');
+        if($email)
+        {
+            $current->setEmail($email);
+        }
+        $name = $this->request()->getValue('name');
+        if(!$name)
+        {
+            $name = null;
+        }
+        $surename = $this->request()->getValue('surename');
+        if(!$surename)
+        {
+            $surename = null;
+        }
+        $current->setName($name);
+        $current->setSurename($surename);
+        $current->save();
+        return $this->redirect("?c=users&a=profile");
     }
 
     public function create() {
@@ -93,9 +115,15 @@ class UsersController extends AControllerBase
     }
 
     public function edit() {
-        $username = $this.request()->getValue('$username');
-        $userToEdit = User::getOne($username);
-        return $this->html($userToEdit, viewName: 'register.form');
+        $usersToCheck = User::getAll();
+        $current = null;
+        foreach ($usersToCheck as $user) {
+            /*$user = User::getOne($login);*/
+            if ($user->getUsername() == $_SESSION['user']) {
+                $current = $user;
+            }
+        }
+        return $this->html($current, viewName: 'edit.form');
     }
 
     public function profile() {

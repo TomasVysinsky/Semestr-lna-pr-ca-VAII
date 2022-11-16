@@ -46,7 +46,7 @@
                 </li>
                 <li class="nav-item">
                     <?php if ($auth->isLogged()) { ?>
-                        <a class="nav-link link" href="#"><?php echo $auth->getLoggedUserName() ?></a>
+                        <a class="nav-link link" href="?c=users&a=profile"><?php echo $auth->getLoggedUserName() ?></a>
                     <?php } else { ?>
                         <a class="nav-link link" href="?c=users&a=create">Register</a>
                     <?php } ?>
