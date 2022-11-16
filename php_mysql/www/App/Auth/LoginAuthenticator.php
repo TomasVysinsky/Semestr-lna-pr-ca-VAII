@@ -15,6 +15,7 @@ class LoginAuthenticator extends DummyAuthenticator
             /*$user = User::getOne($login);*/
             if ($user->getUsername() == $login) {
                 if ($user->getPassword() == $password) {
+                    $_SESSION['user'] = $login;
                     return true;
                 }
             }
