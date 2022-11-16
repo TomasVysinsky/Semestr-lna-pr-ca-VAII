@@ -25,10 +25,17 @@ class UsersController extends AControllerBase
     }
 
     public function delete() {
-        $username = $this->request()->getValue('username');
-        $userToDelete = User::getOne($username);
-        if ($userToDelete) {
-            $userToDelete->delete();
+        $usersToCheck = User::getAll();
+        $current = null;
+        foreach ($usersToCheck as $user) {
+            /*$user = User::getOne($login);*/
+            if ($user->getUsername() == $_SESSION['user']) {
+                $current = $user;
+            }
+        }
+        if ($current) {
+            $this->app->getAuth()->logout();
+            $current->delete();
         }
         return $this->redirect("?c=home");
     }
@@ -89,5 +96,17 @@ class UsersController extends AControllerBase
         $username = $this.request()->getValue('$username');
         $userToEdit = User::getOne($username);
         return $this->html($userToEdit, viewName: 'register.form');
+    }
+
+    public function profile() {
+        $usersToCheck = User::getAll();
+        $current = null;
+        foreach ($usersToCheck as $user) {
+            /*$user = User::getOne($login);*/
+            if ($user->getUsername() == $_SESSION['user']) {
+                $current = $user;
+            }
+        }
+        return $this->html($current, viewName: 'profile'); /*new User(), viewName: 'register.form'*/
     }
 }
