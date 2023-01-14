@@ -42,7 +42,7 @@ $layout = 'auth';
                                    placeholder="Surename">
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-warning" type="submit" name="submit">Submit
+                            <button id="submit" class="btn btn-warning" type="submit" name="submit" disabled>Submit
                             </button>
                         </div>
                     </form>

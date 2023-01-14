@@ -56,31 +56,38 @@ password.addEventListener('keyup', function(){
 
     function assessTotalScore(){
         var ratingElement = document.querySelector(".rating");
+        var submitButton = document.getElementById("submit");
         rating.total = rating.number + rating.lowercase + rating.uppercase + rating.specialChar + rating.length;
 
         if (rating.total === 0) {
             ratingElement.innerHTML = "";
             ratingElement.classList.remove("weakPassword", "moderatePassword", "strongPassword", "veryStrongPassword", "ultimatePassword");
+            submitButton.disabled = true;
         } else if (rating.total === 1){
             ratingElement.innerHTML = "Weak password";
             ratingElement.classList.remove("moderatePassword", "strongPassword", "veryStrongPassword", "ultimatePassword");
             ratingElement.classList.add("weakPassword");
+            submitButton.disabled = true;
         } else if (rating.total === 2){
             ratingElement.innerHTML = "Moderate password";
             ratingElement.classList.remove("weakPassword", "strongPassword", "veryStrongPassword", "ultimatePassword");
             ratingElement.classList.add("moderatePassword");
+            submitButton.disabled = true;
         } else if (rating.total === 3){
             ratingElement.innerHTML = "Strong password";
             ratingElement.classList.remove("weakPassword", "moderatePassword");
             ratingElement.classList.add("strongPassword");
+            submitButton.disabled = true;
         } else if (rating.total === 4) {
             ratingElement.innerHTML = "Very strong password";
             ratingElement.classList.remove("weakPassword", "moderatePassword", "strongPassword", "ultimatePassword");
             ratingElement.classList.add("veryStrongPassword");
+            submitButton.disabled = false;
         } else if (rating.total === 5) {
             ratingElement.innerHTML = "Ultimate password";
             ratingElement.classList.remove("weakPassword", "moderatePassword", "strongPassword", "veryStrongPassword");
             ratingElement.classList.add("ultimatePassword");
+            submitButton.disabled = false;
         }
     }
 
