@@ -60,7 +60,8 @@ class UsersController extends AControllerBase
 
         $user = new User();
         $user->setUsername($username);
-        $user->setPassword($password);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $user->setPassword($hash);
         $user->setEmail($this->request()->getValue('email'));
         $name = $this->request()->getValue('name');
         if(!$name)
@@ -76,6 +77,10 @@ class UsersController extends AControllerBase
         $user->setSurename($surename);
         $user->save();
         $this->app->getAuth()->login($username, $password);
+        /*while (!$this->app->getAuth()->isLogged())
+        {
+            $this->app->getAuth()->login($username, $password);
+        }*/
         return $this->redirect("?c=home");
     }
 

@@ -66,4 +66,5 @@
     </div>
 </div>
 </body>
+<script src="public/js/passwordRating.js" type="application/javascript"></script>
 </html>

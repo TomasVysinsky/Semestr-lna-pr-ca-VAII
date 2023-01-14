@@ -134,3 +134,19 @@
     padding: 10px;
     cursor: pointer;
 }
+
+.rating {
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.weakPassword { background-color: #dc3737; }
+.moderatePassword { background-color: #f7af1d; }
+.strongPassword { background-color: #a3de83; }
+.veryStrongPassword { background-color: #2eb872; }
+.ultimatePassword { background-color: #005792; }

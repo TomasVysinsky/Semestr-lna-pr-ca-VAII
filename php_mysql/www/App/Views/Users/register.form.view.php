@@ -24,10 +24,11 @@ $layout = 'auth';
                             <input name="password" type="password" id="password" class="form-control"
                                    placeholder="Password" required>
                         </div>
-                        <div class="form-label-group mb-3">
+                        <div class="form-label-group mb-2">
                             <input name="confPassword" type="password" id="confPassword" class="form-control"
                                    placeholder="Confirm password" required>
                         </div>
+                        <div class="rating" class="mb-3"></div>
                         <div class="form-label-group mb-3">
                             <input name="email" type="text" id="email" class="form-control"
                                    placeholder="Email" required>
