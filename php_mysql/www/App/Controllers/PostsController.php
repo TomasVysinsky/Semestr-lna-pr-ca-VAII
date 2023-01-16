@@ -22,6 +22,7 @@ class PostsController extends AControllerBase
 
         $postToDelete = Post::getOne($id);
         if($postToDelete) {
+            unlink($postToDelete->getImg());
             $postToDelete->delete();
         }
         return $this->redirect("?c=posts");
