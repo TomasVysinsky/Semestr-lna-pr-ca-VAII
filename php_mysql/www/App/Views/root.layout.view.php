@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="public/css/Styles.css">
     <link rel="stylesheet" href="public/css/styl.css">
     <script src="public/js/script.js"></script>
-    <script src="public/js/cookie.js" type="application/javascript"></script>
 </head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg bg-warning">
@@ -36,6 +35,11 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <?php if ($auth->isLogged()) { ?>
+                        <a class="nav-link" href="?c=posts">My posts</a>
+                    <?php } ?>
                 </li>
                 <li class="nav-item">
                     <?php if ($auth->isLogged()) { ?>
@@ -68,14 +72,5 @@
     </div>
 </div>
 
-<!--Cookies okienko-->
-<div class="cookie-disclaimer">
-    <div class="cookie-close accept-cookie"><i class="fa fa-times"></i></div>
-    <div class="container">
-        <p>JDM lovers uses cookies to increase the quality of the website. <a href="#">Read more about which cookies we use</a>.
-            <br>By continuing to use the website, you accept our use of cookies</p>
-        <button type="button" class="btn btn-success accept-cookie">I accept!</button>
-    </div>
-</div>
 </body>
 </html>

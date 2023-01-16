@@ -30,7 +30,7 @@ $layout = 'auth';
                         </div>
                         <div class="rating" class="mb-3"></div>
                         <div class="form-label-group mb-3">
-                            <input name="email" type="text" id="email" class="form-control"
+                            <input name="email" type="email" id="email" class="form-control"
                                    placeholder="Email" required>
                         </div>
                         <div class="form-label-group mb-3">

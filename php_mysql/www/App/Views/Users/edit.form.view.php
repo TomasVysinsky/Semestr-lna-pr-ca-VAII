@@ -10,7 +10,7 @@ $layout = 'auth';
             <form class="form-signin" method="post" action="?c=users&a=store">
                 <div class="form-label-group mb-3">
                     <label for="email">Email address</label>
-                    <input name="email" type="text" id="email" class="form-control"
+                    <input name="email" type="email" id="email" class="form-control"
                            placeholder="<?php echo $data->getEmail() ?>">
                 </div>
                 <div class="form-label-group mb-3">

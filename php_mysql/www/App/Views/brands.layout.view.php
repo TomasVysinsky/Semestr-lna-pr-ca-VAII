@@ -39,6 +39,11 @@
                 </li>
                 <li class="nav-item">
                     <?php if ($auth->isLogged()) { ?>
+                        <a class="nav-link" href="?c=posts">My posts</a>
+                    <?php } ?>
+                </li>
+                <li class="nav-item">
+                    <?php if ($auth->isLogged()) { ?>
                         <a class="nav-link" href="?c=auth&a=logout">Logout</a>
                     <?php } else { ?>
                         <a class="nav-link link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Login</a>
