@@ -16,7 +16,7 @@ $layout = 'auth';
                 <div class="form-label-group mb-3">
                     <label for="name">First name</label>
                     <input name="name" type="text" id="name" class="form-control"
-                           placeholder="nie je zadane";
+                           placeholder="nie je zadane"
                            value="<?php if ($data->getName() != null) {
                                        echo $data->getName();
                                    }

@@ -89,7 +89,7 @@ class PostsController extends AControllerBase
             foreach ($postToLike->getLikes() as $like) {
                 if ($like->getUser() == $this->app->getAuth()->getLoggedUserName()) {
                     $like->delete();
-                    return $this->redirect("?c=posts");
+                    return $this->redirect($_SERVER['HTTP_REFERER']);
                 }
             }
         }
@@ -99,6 +99,6 @@ class PostsController extends AControllerBase
         $newLike->setPostId($id);
         $newLike->save();
 
-        return $this->redirect("?c=posts");
+        return $this->redirect($_SERVER['HTTP_REFERER']);
     }
 }

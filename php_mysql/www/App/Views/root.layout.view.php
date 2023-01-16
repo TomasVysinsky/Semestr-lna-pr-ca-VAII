@@ -63,7 +63,7 @@
 
 
 
-<div class="balance-background">
+<div class="balance-background" style="margin-top: 67px">
     <div class="web-content">
         <?= $contentHTML ?>
     </div>
