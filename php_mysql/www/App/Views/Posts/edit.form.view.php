@@ -3,8 +3,6 @@ $layout = 'auth';
 /** @var \App\Models\Post $data */
 ?>
 
-<!--TODO Nacitanie uz existujucich hodnot-->
-
 <div class="container position-absolute top-50 start-50 translate-middle">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">

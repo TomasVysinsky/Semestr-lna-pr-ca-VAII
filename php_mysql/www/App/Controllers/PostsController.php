@@ -54,9 +54,16 @@ class PostsController extends AControllerBase
         }
         if ($current) {
             $post = new Post();
-            $post->setUserUserId($current->getId());
+            $post->setUsersId($current->getId());
+            $post->setUsersUsername($current->getUsername());
             $obsah = $this->request()->getValue('obsah');
             $post->setText($obsah);
+            if (isset($_FILES['img']) && $_FILES['img']['error'] == UPLOAD_ERR_OK) {
+                $newName = "public". DIRECTORY_SEPARATOR . "images" . DIRECTORY_SEPARATOR . "PostPics". DIRECTORY_SEPARATOR . time() . "_" . $_FILES['img']["name"];
+                if (move_uploaded_file($_FILES['img']["tmp_name"], $newName)){
+                    $post->setImg($newName);
+                }
+            }
             $post->save();
         } else {
             return $this->redirect("?c=post");

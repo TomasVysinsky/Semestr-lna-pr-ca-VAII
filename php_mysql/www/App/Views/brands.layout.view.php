@@ -60,7 +60,7 @@
         </div>
     </div>
 </nav>
-<div class="balance-background">
+<div class="balance-background" style="margin-bottom: 100px">
     <div class="web-content">
         <?= $contentHTML ?>
     </div>

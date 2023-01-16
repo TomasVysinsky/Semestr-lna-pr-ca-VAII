@@ -24,14 +24,14 @@ $layout = 'auth';
                     <div class="text-center text-danger mb-3">
                         <?php //= @$data['message'] ?>
                     </div>
-                    <form class="form-signin" method="post" action="?c=posts&a=register">
-                        <!--<div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Title</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                        </div>-->
+                    <form class="form-signin" method="post" action="?c=posts&a=register" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Text of the post</label>
                             <textarea name="obsah" id="obsah" class="form-control" type="text" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Picture</label>
+                            <input type="file" name="img">
                         </div>
                         <div class="text-center">
                             <button id="submit" class="btn btn-warning" type="submit" name="submit">Submit

@@ -7,12 +7,29 @@ use App\Core\Model;
 class Post extends Model
 {
     protected $id;
-    protected $user_userId;
+    protected $users_id;
+    protected $users_username;
     protected $text;
     protected $img;
 
     public function getLikes() {
         return Like::getAll('post_id = ?', [$this->getId()]);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsersUsername()
+    {
+        return $this->users_username;
+    }
+
+    /**
+     * @param mixed $users_username
+     */
+    public function setUsersUsername($users_username): void
+    {
+        $this->users_username = $users_username;
     }
 
     /**
@@ -34,17 +51,17 @@ class Post extends Model
     /**
      * @return mixed
      */
-    public function getUserUserId()
+    public function getUsersId()
     {
-        return $this->user_userId;
+        return $this->users_id;
     }
 
     /**
-     * @param mixed $user_userId
+     * @param mixed $users_id
      */
-    public function setUserUserId($user_userId): void
+    public function setUsersId($users_id): void
     {
-        $this->user_userId = $user_userId;
+        $this->users_id = $users_id;
     }
 
     /**
