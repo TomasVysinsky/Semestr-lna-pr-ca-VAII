@@ -50,7 +50,7 @@
 
 
 
-<div class="balance-background" style="margin-top: 67px">
+<div class="balance-background floating-navbar-offset">
     <div class="web-content">
         <?= $contentHTML ?>
     </div>

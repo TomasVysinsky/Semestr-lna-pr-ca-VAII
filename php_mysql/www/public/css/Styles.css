@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
 }
-
+/*
 .navbar-fixed{
     position: fixed;
     width: 100%;
-}
+}*/
 
 .balance-background{
 /*    margin-top: 30px;*/
@@ -60,19 +60,21 @@
     display: block;
 }
 
+/*
 .login-site{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+}*/
 
 .static-end-node{
     bottom: 0;
     position: fixed;
 }
 
+/*
 .log-sup{
     width: 25%;
     position: absolute;
@@ -80,6 +82,13 @@
     left: 38%;
     margin: 0;
     padding: 0;
+}*/
+.floating-navbar-offset {
+    margin-top: 67px;
+}
+
+.floating-bottom-offset {
+    margin-bottom: 100px;
 }
 
 .list-of-brands{
