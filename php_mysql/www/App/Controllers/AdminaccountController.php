@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
 use App\Models\Adminaccount;
+use App\Models\Brand;
 use App\Models\Title;
 
 class AdminaccountController extends AControllerBase
@@ -16,6 +17,12 @@ class AdminaccountController extends AControllerBase
     public function index(): Response
     {
         return $this->html();
+    }
+
+    public function brands(): Response
+    {
+        $brands = Brand::getAll();
+        return $this->html($brands);
     }
 
     public function aboutus(): Response
