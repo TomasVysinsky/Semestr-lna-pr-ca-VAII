@@ -5,7 +5,10 @@ $layout = 'admin';
 $allAdmins = \App\Models\Adminaccount::getAll();
 ?>
 <div class="text-center">
-    <a href="?c=adminaccount&a=create" class="btn btn-dark" style="margin-top: 10px">Create admin account</a>
+    <a href="?c=adminaccount&a=changepassword" class="btn btn-dark" style="margin-top: 10px">Change password</a>
+</div>
+<div class="text-center">
+    <a href="?c=adminaccount&a=create" class="btn btn-dark" style="margin-top: 3px">Create admin account</a>
 </div>
 <?php
 foreach ($allAdmins as $admin)

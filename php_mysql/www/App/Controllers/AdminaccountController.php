@@ -53,7 +53,7 @@ class AdminaccountController extends AControllerBase
         }
 
         $data = ['message' => 'Zlý login alebo heslo!'];
-        return $this->html($data);
+        return $this->html($data, viewName: 'login.form');
     }
     public function edit(): Response {
         $id = $this->request()->getValue('id');
@@ -125,5 +125,36 @@ class AdminaccountController extends AControllerBase
         $user->setPassword($hash);
         $user->save();
         return $this->redirect("?c=adminaccount&a=adminmanagement");
+    }
+
+    public function changepassword(): Response {
+        return $this->html(viewName: 'newpassword.form');
+    }
+
+    public function newpassword(): Response {
+        $admins = Adminaccount::getAll();
+        $current = null;
+        foreach ($admins as $admin) {
+            if ($admin->getUsername() == $_SESSION['user'])
+                $current = $admin;
+        }
+
+        $old = $this->request()->getValue('oldpassword');
+        if ($current){
+            if (password_verify($old, $current->getPassword())){
+                $password = $this->request()->getValue('password');
+                if ($password != $this->request()->getValue('confPassword'))
+                {
+                    return $this->html(['message' => "New passwords don't match!"], viewName: 'newpassword.form');
+                }
+                $newpassword = password_hash($password, PASSWORD_DEFAULT);
+                $current->setPassword($newpassword);
+                $current->save();
+                return $this->redirect("?c=adminaccount&a=adminmanagement");
+            }
+            return $this->html(['message' => "Wrong old password"], viewName: 'newpassword.form');
+        }
+
+        return $this->html(['message' => "Something went wrong...we cannot find the user"], viewName: 'newpassword.form');
     }
 }
