@@ -18,6 +18,11 @@ class AdminaccountController extends AControllerBase
         return $this->html();
     }
 
+    public function aboutus(): Response
+    {
+        return $this->html();
+    }
+
     public function logging(): Response
     {
         return $this->html(viewName: 'login.form');
@@ -60,6 +65,8 @@ class AdminaccountController extends AControllerBase
         $post->setText($this->request()->getValue('obsah'));
         $post->save();
 
+        if ($id == 3)
+            return $this->redirect("?c=adminaccount&a=aboutus");
         return $this->redirect("?c=adminaccount");
     }
 

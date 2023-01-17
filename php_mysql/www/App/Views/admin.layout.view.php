@@ -31,21 +31,13 @@
                     <a class="nav-link active" aria-current="page" href="?c=adminaccount">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link" href="#">About Us</a>
+                    <a class="nav-link link" href="?c=adminaccount&a=aboutus">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <?php if ($auth->isLogged()) { ?>
-                        <a class="nav-link" href="?c=auth&a=logout">Logout</a>
-                    <?php } else { ?>
-                        <a class="nav-link link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Login</a>
-                    <?php } ?>
+                    <a class="nav-link" href="?c=auth&a=logout">Logout</a>
                 </li>
                 <li class="nav-item">
-                    <?php if ($auth->isLogged()) { ?>
-                        <a class="nav-link link" href="?c=adminaccount&a=adminmanagement"><?php echo $auth->getLoggedUserName() ?></a>
-                    <?php } else { ?>
-                        <a class="nav-link link" href="?c=users&a=create">Register</a>
-                    <?php } ?>
+                    <a class="nav-link link" href="?c=adminaccount&a=adminmanagement"><?php echo $auth->getLoggedUserName() ?></a>
                 </li>
             </ul>
         </div>

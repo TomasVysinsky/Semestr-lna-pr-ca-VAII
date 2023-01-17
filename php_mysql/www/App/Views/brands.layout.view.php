@@ -32,7 +32,7 @@
                     <a class="nav-link" href="?c=home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="?c=brands">Brands</a>
+                    <a class="nav-link active" aria-current="page" href="?c=home&a=aboutus">Brands</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link" href="#">About Us</a>
