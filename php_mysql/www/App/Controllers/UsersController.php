@@ -76,7 +76,7 @@ class UsersController extends AControllerBase
         $user->setName($name);
         $user->setSurename($surename);
         $user->save();
-        $this->app->getAuth()->login($username, $password);
+        $this->app->getAuth()->login($username, $password, false);
         /*while (!$this->app->getAuth()->isLogged())
         {
             $this->app->getAuth()->login($username, $password);

@@ -13,7 +13,7 @@ class DummyAuthenticator implements IAuthenticator
 {
     const LOGIN = "admin";
     const PASSWORD_HASH = '$2y$10$GRA8D27bvZZw8b85CAwRee9NH5nj4CQA6PDFMc90pN9Wi4VAWq3yq'; // admin
-    const USERNAME = "Admin";
+    const USERNAME = "Adminaccount";
 
     /**
      * DummyAuthenticator constructor
@@ -27,10 +27,11 @@ class DummyAuthenticator implements IAuthenticator
      * Verify, if the user is in DB and has his password is correct
      * @param $login
      * @param $password
+     * @param $admin
      * @return bool
      * @throws \Exception
      */
-    function login($login, $password): bool
+    function login($login, $password, $admin): bool
     {
         if ($login == self::LOGIN && password_verify($password, self::PASSWORD_HASH)) {
             $_SESSION['user'] = self::USERNAME;

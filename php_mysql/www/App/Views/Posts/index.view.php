@@ -4,8 +4,6 @@ $layout = 'brands';
 use App\Models\Post;
 /** @var Post[] $data */
 /** @var \App\Core\IAuthenticator $auth */
-$userAll = \App\Models\User::getAll();
-//$user = \App\Models\User::getOne($auth->getLoggedUserId());
 ?>
 <div class="text-center">
     <a href="?c=posts&a=create" class="btn btn-dark" style="margin-top: 10px">Create post</a>

@@ -11,7 +11,7 @@ $layout = 'auth';
                     <div class="text-center text-danger mb-3">
                         <?= @$data['message'] ?>
                     </div>
-                    <form class="form-signin" method="post" action="<?= \App\Config\Configuration::LOGIN_URL ?>">
+                    <form class="form-signin" method="post" action="?c=adminaccount&a=login">
                         <div class="mb-3">
                             <!--<label for="exampleInputEmail1" class="form-label">Email address</label>-->
                             <!--input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"-->
@@ -28,7 +28,6 @@ $layout = 'auth';
                             </button>
                         </div>
                     </form>
-                    <a href="?c=adminaccount&a=logging">Login as admin</a>
                 </div>
             </div>
         </div>
