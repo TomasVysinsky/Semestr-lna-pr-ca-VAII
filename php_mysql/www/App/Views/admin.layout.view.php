@@ -28,10 +28,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="?c=adminaccount">Home</a>
+                    <a class="nav-link link" href="?c=adminaccount">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="?c=adminaccount&a=brands">Brands</a>
+                    <a class="nav-link link" href="?c=adminaccount&a=brands">Brands</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link" href="?c=adminaccount&a=aboutus">About Us</a>

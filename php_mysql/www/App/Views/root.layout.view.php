@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="?c=home">Home</a>
+                    <a class="nav-link" href="?c=home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link" href="?c=brands">Brands</a>
