@@ -4,23 +4,10 @@ $layout = 'auth';
 use App\Models\User;
 /** @var User $data */
 /** @var \App\Core\IAuthenticator $auth */
-/*
-/** @var User $user*/
-/*$user = User::getOne($auth->getLoggedUserId());*/
-/*foreach ($data as $current)
-{
-    echo $current->getUsername();
-    if ($current->getUsername() == $auth->getLoggedUserName())
-    {
-        $current = $current;
-    }
-}*/
 ?>
 <div class="container position-absolute top-50 start-50 translate-middle">
     <div class="card mb-4">
         <div class="card-body text-center">
-            <!--<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-                 class="rounded-circle img-fluid" style="width: 150px;">-->
             <h5 class="my-3"><?php echo $auth->getLoggedUserName() ?></h5>
             <p class="text-muted mb-1">Email: <?php echo $data->getEmail() ?></p>
             <p class="text-muted mb-1">Meno:

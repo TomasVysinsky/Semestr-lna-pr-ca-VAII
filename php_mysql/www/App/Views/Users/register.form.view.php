@@ -28,7 +28,7 @@ $layout = 'auth';
                             <input name="confPassword" type="password" id="confPassword" class="form-control"
                                    placeholder="Confirm password" required>
                         </div>
-                        <div class="rating" class="mb-3"></div>
+                        <div class="rating mb-3"></div>
                         <div class="form-label-group mb-3">
                             <input name="email" type="email" id="email" class="form-control"
                                    placeholder="Email" required>

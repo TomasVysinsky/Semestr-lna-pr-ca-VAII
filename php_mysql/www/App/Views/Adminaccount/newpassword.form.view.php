@@ -26,7 +26,7 @@ $layout = 'admin';
                             <input name="confPassword" type="password" id="confPassword" class="form-control"
                                    placeholder="Confirm password" required>
                         </div>
-                        <div class="rating" class="mb-3"></div>
+                        <div class="rating mb-3"></div>
                         <div class="text-center">
                             <button id="submit" class="btn btn-warning" type="submit" name="submit" disabled>Submit
                             </button>
